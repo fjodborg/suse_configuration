@@ -56,6 +56,13 @@ sudo zypper ar -cf https://download.opensuse.org/repositories/devel:/tools:/ide:
 sudo zypper in code
 ```
 
+### media Codec
+```bash
+sudo zypper in opi
+opi codecs
+```
+
+
 ### Misc
 ``` bash
 sudo zypper in discord
