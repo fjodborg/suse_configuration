@@ -18,6 +18,14 @@ sudo zypper refresh
 sudo zypper in patterns-cosmic-cosmic
 ```
 
+## KDE DE
+```bash
+sudo zypper install sddm
+sudo zypper in -t pattern kde kde_plasma
+sudo update-alternatives --config default-displaymanager 
+# Possibly i also need to add DISPLAYMANAGER=sddm inside /etc/sysconfig/displaymanager
+```
+
 now logout and choose the user. Then in the bottom right corner select the cogwheel and select cosmic and login
 
 ## Install git and generate ssh key.
@@ -52,9 +60,18 @@ echo "export EDITOR=nano" | tee -a $HOME/.bashrc
 
 ### Vscode 
 ``` bash
-sudo zypper ar -cf https://download.opensuse.org/repositories/devel:/tools:/ide:/vscode/openSUSE_Tumbleweed devel_tools_ide_vscode
-sudo zypper in code
+sudo zypper in opi
+opi vscode
 ```
+
+```
+code --install-extension ms-python.python
+code --install-extension rust-lang.rust
+code --install-extension tamasfe.even-better-toml
+code --install-extension ms-vscode.cpptools
+```
+
+
 
 ### media Codec
 ```bash
@@ -65,5 +82,5 @@ opi codecs
 
 ### Misc
 ``` bash
-sudo zypper in discord
+sudo zypper in discord htop
 ```
